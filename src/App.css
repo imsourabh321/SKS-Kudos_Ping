@@ -1,20 +1,43 @@
+::-webkit-scrollbar{
+  display: none;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(120deg, #046051 20%, #3a0560 100%);
-  /* background-image: 'to-do-png.png'; */
-  color: white;
+  background: 
+  linear-gradient(
+      rgba(24, 24, 24, 0.4),
+      rgba(0, 140, 255, 0.4),
+      rgba(134, 0, 224, 0.6)
+    ),
+    url("https://c4.wallpaperflare.com/wallpaper/257/134/394/ultra-hd-fish-clownfish-underwater-wallpaper-preview.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
 header {
   font-size: 1.8rem;
-  color: rgb(35, 243, 198);
+  color: #1596ff;
 }
-
+header span{
+  color: #175792;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.top img{
+  width: 10vw;
+  margin: 2vw;
+}
 header,
 form {
   min-height: 25vh;
@@ -33,9 +56,10 @@ form button {
 form input{
   border-top-left-radius: 0.6rem;
   border-bottom-left-radius: 0.6rem;
+  box-shadow: 0px 18px 15px -15px #111; 
 }
 form button {
-  color: #089a82;
+  color: #1596ff;
   background: #f7fffe;
   cursor: pointer;
   border-top-right-radius: 0.6rem;
@@ -43,13 +67,14 @@ form button {
   transition: all 0.3s ease;
 }
 form button:hover {
-  background: #089a82;
+  background: #175792;
   color: white;
 }
 .todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5vh;
 }
 
 .todo-list {
@@ -62,7 +87,7 @@ form button:hover {
   margin: 0.4rem;
   background: white;
   font-size: 1.3rem;
-  color: rgb(0, 106, 74);
+  color: #175792;
   display: flex;
   border-radius: 0.4rem;
   justify-content: space-between;
@@ -79,7 +104,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #067d69;
+  background: #175792;
   color: white;
   border: none;
   padding: 0.6rem;
@@ -87,7 +112,7 @@ form button:hover {
   font-size: 1rem;
 }
 .complete-btn {
-  background: rgb(51, 207, 173);
+  background: #1596ff;
 }
 .trash-btn {
   border-top-right-radius: 0.4rem;
@@ -126,12 +151,13 @@ select {
 
 /* Custom Select */
 .select {
-  margin: 2rem;
+  margin-left: 2rem;
   position: relative;
   overflow: hidden;
+  box-shadow: 0px 18px 15px -15px #111; 
 }
 select {
-  color: rgb(0, 106, 74);
+  color: #175792;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
@@ -143,7 +169,7 @@ select {
   top: 0;
   right: 0;
   padding: 0.6rem;
-  background: #067d69;
+  background: #175792;
   cursor: pointer;
   border-top-right-radius: 0.6rem;
   border-bottom-right-radius: 0.6rem;
@@ -155,3 +181,29 @@ select {
   transform: scale(1.5);
 }
 */
+
+@media screen and (max-width: 660px){
+  header{
+    font-size: 5vw;
+  }
+  .top img{
+    width: 14vw;
+  }
+  form{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+  }
+  form input{
+    margin: 2vw;
+    margin-left: 11vw;
+    margin-right: 0;
+    width:70vw;
+  }
+  .select{
+    margin-left: auto;
+    margin-right: auto;
+    width:32vw;
+  }
+}

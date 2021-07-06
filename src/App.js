@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from "react";
 import './App.css';
+import kp from './kplogo.png'
 
 // Import Components
 import Form from './components/Form'
@@ -30,7 +31,7 @@ function App() {
       case "completed":
         setFilteredTodos(todos.filter((todo) => todo.completed === true));
         break;
-      case "completed":
+      case "uncompleted":
         setFilteredTodos(todos.filter((todo) => todo.completed === false));
         break;
       default:
@@ -56,9 +57,12 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1>Ping Note</h1>
-      </header>
+      <div className="top">
+        <img src={kp} alt="" />
+        <header>
+          <h1>Kudos <span>Ping</span></h1>
+        </header>
+      </div>
       <Form 
       inputText={inputText} 
       todos={todos} 
